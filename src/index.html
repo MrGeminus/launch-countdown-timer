@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="MrGeminus">
+  <meta name="description" content="This is a solution to the Launch countdown timer challenge on Frontend Mentor">
+  <meta name="keywords"
+    content="HTML5, Accessibility, BEM, CSS3, Mobile-first, Javascript, ESLint, Frontend, Launch countdown timer, Frontend Mentor">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:creator" content="@MrGeminus" />
+  <meta property="twitter:url" content="https://mrgeminus.github.io/launch-countdown-timer/" />
+  <meta name="twitter:title" content="Frontend Mentor | Launch countdown timer" />
+  <meta name="twitter:description"
+    content="This is a solution to the Launch countdown timer challenge on Frontend Mentor" />
+  <meta name="twitter:image"
+    content="https://github.com/MrGeminus/launch-countdown-timer/blob/main/screenshots/preview.png?raw=true" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://mrgeminus.github.io/launch-countdown-timer">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Frontend Mentor | Launch countdown timer">
+  <meta property="og:description"
+    content="This is a solution to the Launch countdown timer challenge on Frontend Mentor">
+  <meta property="og:image"
+    content="https://github.com/MrGeminus/launch-countdown-timer/blob/main/screenshots/preview.png?raw=true">
+  <link rel="icon" type="image/svg+xml" sizes="32x32" href="./assets/icons/favicon.svg">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <title>Frontend Mentor | Launch countdown timer</title>
+</head>
+
+<body class="page">
+  <a class="button" href="#main">Skip to main content</a>
+  <div class="page__overlay">
+    <main id="main" class="main">
+      <h1 class="main__title">We're launching soon</h1>
+      <dl class="countdown" role="timer" aria-live="polite" aria-atomic="true">
+        <div class="countdown__group">
+          <dt class="countdown__time-unit">Days</dt>
+          <dd class="countdown__time-value" data-time="days">
+            <span class="countdown__upper-value" aria-hidden="true" data-value="top">14</span>
+            <span class="countdown__lower-value" aria-hidden="true" data-value="bottom">14</span>
+            <span class="sr-only" data-value="screen">00</span>
+          </dd>
+        </div>
+        <div class="countdown__group">
+          <dt class="countdown__time-unit">Hours</dt>
+          <dd class="countdown__time-value" data-time="hours">
+            <span class="countdown__upper-value" aria-hidden="true" data-value="top">00</span>
+            <span class="countdown__lower-value" aria-hidden="true" data-value="bottom">00</span>
+            <span class="sr-only" data-value="screen">00</span>
+          </dd>
+        </div>
+        <div class="countdown__group">
+          <dt class="countdown__time-unit">Minutes</dt>
+          <dd class="countdown__time-value" data-time="minutes">
+            <span class="countdown__upper-value" aria-hidden="true" data-value="top">00</span>
+            <span class="countdown__lower-value" aria-hidden="true" data-value="bottom">00</span>
+            <span class="sr-only" data-value="screen">00</span>
+          </dd>
+        </div>
+        <div class="countdown__group" aria-hidden="true">
+          <dt class="countdown__time-unit">Seconds</dt>
+          <dd class="countdown__time-value" data-time="seconds">
+            <span class="countdown__upper-value" data-value="top">00</span>
+            <span class="countdown__lower-value" data-value="bottom">00</span>
+          </dd>
+        </div>
+      </dl>
+    </main>
+    <footer class="footer">
+      <ul class="socials">
+        <li>
+          <a class="link socials__link" href="#" target="_blank">
+            <svg class="socials__icon" aria-hidden="true">
+              <use xlink:href="./assets/icons/socials.svg#facebook"></use>
+            </svg>
+            <span class="sr-only">Follow us onFacebook</span>
+          </a>
+        </li>
+        <li>
+          <a class="link socials__link" href="#" target="_blank">
+            <svg class="socials__icon" aria-hidden="true">
+              <use xlink:href="./assets/icons/socials.svg#pinterest"></use>
+            </svg>
+            <span class="sr-only">Follow us on Pinterest</span>
+          </a>
+        </li>
+        <li>
+          <a class="link socials__link" href="#" target="_blank">
+            <svg class="socials__icon" aria-hidden="true">
+              <use xlink:href="./assets/icons/socials.svg#instagram"></use>
+            </svg>
+            <span class="sr-only">Follow us on Instagram</span>
+          </a>
+        </li>
+      </ul>
+      <p class="footer__attribution">Challenge by <a class="link" href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank">Frontend
+          Mentor</a>.
+        Coded by <a class="link" href="https://github.com/MrGeminus" target="_blank">MrGeminus</a>.</p>
+    </footer>
+  </div>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

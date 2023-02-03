@@ -1,0 +1,51 @@
+{
+  "version": "1.0.0",
+  "author": {
+    "name": "MrGeminus",
+    "email": "contact@mrgeminus.com",
+    "url": "http://mrgeminus.com/"
+  },
+  "name": "launch-countdown-timer",
+  "description": "This is a solution to the Launch countdown timer challenge on Frontend Mentor.",
+  "keywords": [
+    "HTML5",
+    "Accessibility",
+    "BEM",
+    "CSS3",
+    "Mobile-first workflow",
+    "JavaScript",
+    "ESLint",
+    "Frontend",
+    "Launch countdown timer",
+    "Frontend Mentor"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrGeminus/launch-countdown-timer.git"
+  },
+  "homepage": "https://github.com/MrGeminus/launch-countdown-timer#readme",
+  "bugs": {
+    "url": "https://github.com/MrGeminus/launch-countdown-timer/issues",
+    "email": "support@mrgeminus.com"
+  },
+  "funding": [
+    {
+      "type": "Buy Me A Coffee",
+      "url": "https://www.buymeacoffee.com/mrgeminus"
+    },
+    {
+      "type": "Subscribe Star",
+      "url": "https://www.subscribestar.com/mrgeminus"
+    }
+  ],
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+    "lint": "npx eslint src/*",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "eslint": "^8.33.0",
+    "jest": "^29.4.1"
+  }
+}

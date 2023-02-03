@@ -1,0 +1,11 @@
+@keyframes flip-upper-value {
+    100% {
+        transform: rotateX(90deg);
+    }
+}
+
+@keyframes flip-lower-value {
+    100% {
+        transform: rotateX(0deg);
+    }
+}

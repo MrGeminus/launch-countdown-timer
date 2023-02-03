@@ -1,0 +1,221 @@
+@import "./fonts.css";
+@import "./variables.css";
+@import "./reset.css";
+@import "./helpers.css";
+@import "./keyframes.css";
+
+body {
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+    background-image:
+        url("../images/bg-stars.svg"),
+        linear-gradient(var(--ultra-dark-blue), var(--purple));
+    background-repeat: repeat, no-repeat;
+}
+
+.page__overlay {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-image: url("../images/bg-hills.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.main__title {
+    margin-bottom: 2.7rem;
+    color: var(--white);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: .45rem;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.countdown__group {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.countdown__time-unit {
+    color: var(--grayish-blue);
+    font-size: .5rem;
+    text-transform: uppercase;
+    letter-spacing: .21rem;
+}
+
+.countdown__time-value {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 .3rem .1rem 0 var(--ultra-dark-blue);
+    color: var(--soft-red);
+    font-size: 2.4rem;
+    overflow: hidden;
+}
+
+.countdown__time-value::before,
+.countdown__time-value::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: .5rem;
+    height: .5rem;
+    border-radius: 100%;
+    background-color: var(--ultra-dark-blue);
+    z-index: 3;
+}
+
+.countdown__time-value::before {
+    left: 0;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.countdown__time-value::after {
+    right: 0;
+    transform: translateX(50%) translateY(-50%);
+}
+
+.countdown__upper-value,
+.countdown__lower-value {
+    width: 100%;
+    height: 2.5rem;
+    line-height: 5rem;
+    overflow: hidden;
+}
+
+.countdown__upper-value {
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+    background-color: hsl(236, 21%, 22%);
+    border-bottom: 0.1 solid var(--ultra-dark-blue);
+}
+
+.countdown__lower-value {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-bottom-left-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    background-color: var(--dark-desaturated-blue);
+}
+
+.countdown__upper-value--flip,
+.countdown__lower-value--flip {
+    position: absolute;
+    left: 0;
+}
+
+.countdown__upper-value--flip {
+    top: 0;
+    animation: flip-upper-value .5s ease-in;
+    transform-origin: bottom;
+}
+
+.countdown__lower-value--flip {
+    bottom: 0;
+    animation: flip-lower-value .5s ease-out .5s;
+    transform-origin: top;
+    transform: rotateX(90deg);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.footer__attribution {
+    padding: 1rem 1.5rem;
+    margin-top: 3.5rem;
+    color: var(--grayish-blue);
+    background-color: hsl(234, 17%, 12%);
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: .05rem;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.socials__link {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.socials__icon {
+    width: 100%;
+    height: 100%;
+    fill: var(--grayish-blue);
+    transition: fill .25s ease-in-out;
+}
+
+.socials__icon:hover {
+    fill: var(--soft-red);
+}
+
+.link {
+    display: inline-block;
+    color: var(--grayish-blue);
+    transition: color .25s ease-in-out;
+}
+
+.link:hover {
+    color: var(--soft-red);
+}
+
+.link:focus {
+    outline: .15rem solid var(--soft-red);
+    outline-offset: .3rem;
+}
+
+.button {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    display: inline-block;
+    padding: .7rem 1.5rem;
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    background-color: var(--grayish-blue);
+    color: var(--ultra-dark-blue);
+    font-size: 1rem;
+    letter-spacing: .05rem;
+    text-decoration: none;
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform .25s ease-in-out, background-color .25s ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--soft-red);
+}
+
+.button:focus {
+    outline: .15rem solid var(--soft-red);
+    outline-offset: .3rem;
+    transform: translateX(0);
+}
